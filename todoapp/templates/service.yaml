@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "todoapp.fullname" . }}
   labels:
-    {{- include "todoapp.labels" . | nindent 4 }}
+    {{- include "todoapp.selectorLabels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   selector:

@@ -9,7 +9,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      {{- include "todoapp.labels" . | nindent 6 }}
+      {{- include "todoapp.selectorLabels" . | nindent 6 }}
   endpoints:
     - port: {{ .Values.serviceMonitor.port }}
       path: {{ .Values.serviceMonitor.path }}
